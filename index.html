@@ -214,6 +214,152 @@
             40% {transform: translateY(-20px);}
             60% {transform: translateY(-10px);}
         }
+
+        
+//update
+
+        <!-- Add this CSS to your <style> section -->
+<style>
+    /* Balloon Animations */
+    .balloon {
+        position: absolute;
+        width: 60px;
+        height: 80px;
+        border-radius: 50%;
+        animation: float 15s linear infinite;
+        z-index: 10;
+        filter: drop-shadow(0 3px 5px rgba(0,0,0,0.2));
+        opacity: 0.9;
+    }
+    
+    .balloon:before {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        width: 4px;
+        height: 15px;
+        background: rgba(100,100,100,0.3);
+        transform: translateX(-50%);
+    }
+    
+    .balloon:after {
+        content: "▲";
+        position: absolute;
+        bottom: -18px;
+        left: 50%;
+        color: rgba(100,100,100,0.3);
+        font-size: 12px;
+        transform: translateX(-50%);
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(100vh) rotate(0deg); }
+        100% { transform: translateY(-20vh) rotate(360deg); }
+    }
+    
+    /* Enhanced Sparkles */
+    .magic-sparkle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: radial-gradient(circle, #fff 20%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: sparkle-fall 3s linear infinite;
+        filter: blur(0.5px);
+    }
+    
+    @keyframes sparkle-fall {
+        0% { 
+            transform: translateY(-10px) rotate(0deg);
+            opacity: 0;
+        }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { 
+            transform: translateY(100px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+</style>
+
+<!-- Add this JavaScript to your <script> section -->
+<script>
+    // Create Balloons
+    function createBalloons() {
+        const colors = ['#ff6b6b', '#48dbfb', '#feca57', '#1dd1a1', '#f368e0'];
+        const heroSection = document.querySelector('.hero-section');
+        
+        for (let i = 0; i < 12; i++) {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = Math.random() * 100 + 'vw';
+            balloon.style.animationDuration = (Math.random() * 10 + 8) + 's';
+            balloon.style.animationDelay = Math.random() * 5 + 's';
+            balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            balloon.style.transform = `scale(${Math.random() * 0.5 + 0.7})`;
+            
+            // Add subtle wobble
+            balloon.style.animationName = `float, wobble-${i}`;
+            
+            // Create custom wobble animation
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes wobble-${i} {
+                    0%, 100% { transform: translateX(0) scale(${Math.random() * 0.5 + 0.7}); }
+                    50% { transform: translateX(${Math.random() * 20 - 10}px) scale(${Math.random() * 0.5 + 0.7}); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            heroSection.appendChild(balloon);
+        }
+    }
+    
+    // Create Magic Sparkles
+    function createMagicSparkles() {
+        setInterval(() => {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'magic-sparkle';
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.top = Math.random() * 100 + 'vh';
+            sparkle.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+            sparkle.style.opacity = Math.random() * 0.7 + 0.3;
+            sparkle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+            
+            // Rainbow sparkles occasionally
+            if (Math.random() > 0.7) {
+                sparkle.style.background = `radial-gradient(circle, 
+                    hsl(${Math.random() * 360}, 100%, 80%) 20%, 
+                    transparent 70%)`;
+            }
+            
+            document.querySelector('.hero-section').appendChild(sparkle);
+            
+            // Remove after animation
+            setTimeout(() => {
+                sparkle.remove();
+            }, 3000);
+        }, 200);
+    }
+    
+    // Call these when page loads
+    window.addEventListener('load', () => {
+        createBalloons();
+        createMagicSparkles();
+        
+        // Add floating effect to cake text
+        gsap.to(".birthday-cake text", {
+            y: 5,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+    });
+</script>
+        
     </style>
 </head>
 <body class="floral-border min-h-screen">

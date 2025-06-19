@@ -1181,6 +1181,22 @@
                 "retina_detect": true
             });
         }
+
+//updated
+
+        document.querySelectorAll('.balloon').forEach(balloon => {
+    balloon.addEventListener('click', () => {
+        balloon.style.transition = 'transform 0.2s';
+        balloon.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+            balloon.style.transform = 'scale(0)';
+            // Play pop sound (add audio element first)
+            new Audio('https://assets.mixkit.co/sfx/preview/mixkit-balloon-pop-with-delay-2354.mp3').play();
+            setTimeout(() => balloon.remove(), 200);
+        }, 200);
+    });
+});
+
     </script>
 </body>
 </html>

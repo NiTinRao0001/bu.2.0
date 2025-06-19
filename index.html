@@ -1,4 +1,3 @@
-<xaiArtifact uuid="b8a1e7d2-4f5c-11ee-be56-0242ac120002" title="index.html" contentType="text/html">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -86,28 +83,6 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
         
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #e2d4f0 0%, #f8d7da 100%);
-            border: 2px solid white;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: linear-gradient(to bottom, #e2d4f0, #f8d7da);
-        }
-        
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
@@ -126,32 +101,6 @@
             opacity: 0;
         }
         
-        .dark-mode {
-            background-color: #1a1a2e;
-            color: #e6e6e6;
-        }
-        
-        .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
-            color: #f8d7da;
-        }
-        
-        .dark-mode .hero-section {
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(58, 12, 71, 0.8) 100%);
-        }
-        
-        .dark-mode .wish-card {
-            background: rgba(30, 30, 60, 0.9);
-            color: #e6e6e6;
-        }
-        
-        .dark-mode .floral-border {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23a569bd' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
-        
-        .starry-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffd700' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
-        
         .photo-frame {
             border: 8px solid white;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -165,29 +114,6 @@
         .photo-frame:hover {
             transform: rotate(0deg) scale(1.05);
             z-index: 10;
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #e2d4f0, #f8d7da);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .active-nav::after {
-            width: 100%;
         }
         
         .birthday-cake {
@@ -215,86 +141,17 @@
             60% {transform: translateY(-10px);}
         }
 
-
-
-</style>
-
-<!-- Add this JavaScript to your <script> section -->
-<script>
-    // Create Balloons
-    function createBalloons() {
-        const colors = ['#ff6b6b', '#48dbfb', '#feca57', '#1dd1a1', '#f368e0'];
-        const heroSection = document.querySelector('.hero-section');
-        
-        for (let i = 0; i < 12; i++) {
-            const balloon = document.createElement('div');
-            balloon.className = 'balloon';
-            balloon.style.left = Math.random() * 100 + 'vw';
-            balloon.style.animationDuration = (Math.random() * 10 + 8) + 's';
-            balloon.style.animationDelay = Math.random() * 5 + 's';
-            balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            balloon.style.transform = `scale(${Math.random() * 0.5 + 0.7})`;
-            
-            // Add subtle wobble
-            balloon.style.animationName = `float, wobble-${i}`;
-            
-            // Create custom wobble animation
-            const style = document.createElement('style');
-            style.innerHTML = `
-                @keyframes wobble-${i} {
-                    0%, 100% { transform: translateX(0) scale(${Math.random() * 0.5 + 0.7}); }
-                    50% { transform: translateX(${Math.random() * 20 - 10}px) scale(${Math.random() * 0.5 + 0.7}); }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            heroSection.appendChild(balloon);
+        .heart {
+            animation: heartbeat 1.5s ease-in-out infinite;
         }
-    }
-    
-    // Create Magic Sparkles
-    function createMagicSparkles() {
-        setInterval(() => {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'magic-sparkle';
-            sparkle.style.left = Math.random() * 100 + 'vw';
-            sparkle.style.top = Math.random() * 100 + 'vh';
-            sparkle.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
-            sparkle.style.opacity = Math.random() * 0.7 + 0.3;
-            sparkle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
-            
-            // Rainbow sparkles occasionally
-            if (Math.random() > 0.7) {
-                sparkle.style.background = `radial-gradient(circle, 
-                    hsl(${Math.random() * 360}, 100%, 80%) 20%, 
-                    transparent 70%)`;
-            }
-            
-            document.querySelector('.hero-section').appendChild(sparkle);
-            
-            // Remove after animation
-            setTimeout(() => {
-                sparkle.remove();
-            }, 3000);
-        }, 200);
-    }
-    
-    // Call these when page loads
-    window.addEventListener('load', () => {
-        createBalloons();
-        createMagicSparkles();
-        
-        // Add floating effect to cake text
-        gsap.to(".birthday-cake text", {
-            y: 5,
-            duration: 2,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-        });
-    });
-</script>
-        
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body class="floral-border min-h-screen">
@@ -317,10 +174,8 @@
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium active-nav">Home</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#wishes" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Wishes</a>
-                    <a href="#memories" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Memories</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#message" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">My Message</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Our Moments</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobileMenuButton" class="text-gray-700 hover:text-pink-600 focus:outline-none">
@@ -335,10 +190,8 @@
         <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50">Home</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50">About</a>
-                <a href="#wishes" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50">Wishes</a>
-                <a href="#memories" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50">Memories</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50">Contact</a>
+                <a href="#message" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50">My Message</a>
+                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50">Our Moments</a>
             </div>
         </div>
     </nav>
@@ -352,18 +205,12 @@
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0" data-aos="fade-right">
                     <h1 class="text-5xl md:text-7xl font-bold text-pink-600 mb-6 handwriting">Happy Birthday, <span class="text-purple-600">Maxy!</span></h1>
-                    <p class="text-xl md:text-2xl text-gray-700 mb-8">Wishing you a day as beautiful and special as you are! May this year bring you endless joy and dreams come true.</p>
+                    <p class="text-xl md:text-2xl text-gray-700 mb-8">On your special day, I wanted to create something as unique and wonderful as you are. This is just a small way to show how much you mean to me.</p>
                     <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#wishes" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center justify-center transition duration-300">
-                            <span>Send a Wish</span>
+                        <a href="#message" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center justify-center transition duration-300">
+                            <span>Read My Message</span>
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                            </svg>
-                        </a>
-                        <a href="#about" class="bg-white text-pink-600 font-bold py-3 px-8 rounded-full text-lg inline-flex items-center justify-center border border-pink-200 hover:bg-pink-50 transition duration-300">
-                            <span>Know More</span>
-                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                             </svg>
                         </a>
                     </div>
@@ -409,7 +256,7 @@
             </div>
         </div>
         <div class="absolute bottom-10 left-0 right-0 flex justify-center scroll-down">
-            <a href="#about" class="text-pink-600 hover:text-purple-600">
+            <a href="#message" class="text-pink-600 hover:text-purple-600">
                 <svg class="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
@@ -417,359 +264,113 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white relative overflow-hidden">
+    <!-- Personal Message Section -->
+    <section id="message" class="py-20 bg-white relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-pink-600 mb-4">About The Birthday Girl</h2>
+                <h2 class="text-4xl font-bold text-pink-600 mb-4">For You, Maxy</h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto"></div>
             </div>
             
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="photo-frame bg-pink-100 p-2 transition duration-300">
-                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Maxy smiling" class="w-full h-auto object-cover">
-                        </div>
-                        <div class="photo-frame bg-purple-100 p-2 transition duration-300 mt-8">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Maxy at the beach" class="w-full h-auto object-cover">
-                        </div>
-                        <div class="photo-frame bg-blue-100 p-2 transition duration-300">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Maxy laughing" class="w-full h-auto object-cover">
-                        </div>
-                        <div class="photo-frame bg-yellow-100 p-2 transition duration-300 mt-8">
-                            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Maxy outdoors" class="w-full h-auto object-cover">
-                        </div>
+            <div class="max-w-3xl mx-auto bg-pink-50 rounded-xl shadow-lg p-8 md:p-12" data-aos="zoom-in">
+                <div class="text-center mb-8">
+                    <svg class="w-16 h-16 mx-auto text-pink-500 heart" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div class="space-y-6 text-gray-700 text-lg">
+                    <p class="text-center font-medium">My Dearest Maxy,</p>
+                    
+                    <p>On your special day, I want you to know how incredibly amazing you are. Your smile brightens my darkest days, your laughter is my favorite melody, and your presence makes life so much more beautiful.</p>
+                    
+                    <p>You're the kind of person who makes ordinary moments feel magical. Whether we're having deep conversations or sitting in comfortable silence, every second with you is a gift I cherish.</p>
+                    
+                    <p class="text-center font-medium handwriting text-2xl text-purple-600">"To the world you may be one person, but to me, you are the world."</p>
+                    
+                    <p>I hope this birthday brings you as much joy as you bring to everyone around you. May all your dreams take flight this year, and may you always remember how loved you are.</p>
+                    
+                    <p class="text-right font-medium">With all my heart,<br>[Your Name]</p>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <button id="confettiBtn" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center justify-center transition duration-300">
+                        <span>Celebrate!</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-pink-50 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-pink-600 mb-4">Our Special Moments</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto"></div>
+                <p class="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">A collection of memories that mean the world to me</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Photo 1 -->
+                <div class="photo-frame bg-white p-2 transition duration-300" data-aos="flip-left">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Special moment" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-600 handwriting text-xl text-center">That time we laughed until we cried</p>
                     </div>
                 </div>
                 
-                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-                    <h3 class="text-3xl font-bold text-purple-600 mb-6">Some Fun Facts About Maxy</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-pink-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Her Superpower</h4>
-                                <p class="text-gray-600">Maxy has an incredible ability to light up any room with her smile and make everyone feel special. Her positive energy is contagious!</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-purple-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Adventurous Spirit</h4>
-                                <p class="text-gray-600">She loves traveling and has visited over 15 countries. Her dream is to see the Northern Lights in Iceland.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-blue-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Secret Talent</h4>
-                                <p class="text-gray-600">Maxy is an amazing baker! Her red velvet cupcakes are legendary among friends and family.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-yellow-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Fun Fact</h4>
-                                <p class="text-gray-600">She can recite all the dialogues from her favorite movie "The Princess Bride" from memory!</p>
-                            </div>
-                        </div>
+                <!-- Photo 2 -->
+                <div class="photo-frame bg-white p-2 transition duration-300" data-aos="flip-left" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Special moment" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-600 handwriting text-xl text-center">Your smile that lights up my world</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Wishes Section -->
-    <section id="wishes" class="py-20 bg-pink-50 relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-pink-600 mb-4">Birthday Wishes For Maxy</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto"></div>
-                <p class="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">Leave your warm wishes for Maxy on her special day. Each message will be like a little gift!</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-purple-600 mb-6">Send Your Wish</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" placeholder="Enter your name">
-                        </div>
-                        <div>
-                            <label for="wish" class="block text-gray-700 font-medium mb-2">Your Birthday Wish</label>
-                            <textarea id="wish" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" placeholder="Write your special message for Maxy..."></textarea>
-                        </div>
-                        <button id="submitWish" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center justify-center transition duration-300 w-full">
-                            <span>Send Birthday Wish</span>
-                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
+                
+                <!-- Photo 3 -->
+                <div class="photo-frame bg-white p-2 transition duration-300" data-aos="flip-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Special moment" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-600 handwriting text-xl text-center">When you made an ordinary day extraordinary</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="photo-frame bg-white p-2 transition duration-300" data-aos="flip-left" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Special moment" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-600 handwriting text-xl text-center">Your adventurous spirit inspires me</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 5 -->
+                <div class="photo-frame bg-white p-2 transition duration-300" data-aos="flip-left" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Special moment" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-600 handwriting text-xl text-center">The way you see beauty in everything</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 6 -->
+                <div class="photo-frame bg-white p-2 transition duration-300" data-aos="flip-left" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Special moment" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-600 handwriting text-xl text-center">Your strength amazes me every day</p>
                     </div>
                 </div>
             </div>
             
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold text-center text-purple-600 mb-8">Wishes For Maxy</h3>
-                <div id="wishesContainer" class="grid md:grid-cols-2 gap-6">
-                    <!-- Sample wishes that will be shown initially -->
-                    <div class="wish-card rounded-xl p-6 shadow-md" data-aos="fade-up">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-pink-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="text-lg font-bold text-gray-800">Sarah</h4>
-                        </div>
-                        <p class="text-gray-600">Happy birthday to the most amazing friend anyone could ask for! May your day be filled with love, laughter, and all your favorite things. Cheers to another fabulous year!</p>
-                        <div class="mt-4 flex justify-end">
-                            <span class="text-xs text-gray-400">Today</span>
-                        </div>
-                    </div>
-                    
-                    <div class="wish-card rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-purple-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="text-lg font-bold text-gray-800">Michael</h4>
-                        </div>
-                        <p class="text-gray-600">To the woman who makes every day brighter - wishing you a birthday as wonderful as you are! May this year bring you endless happiness and dreams come true.</p>
-                        <div class="mt-4 flex justify-end">
-                            <span class="text-xs text-gray-400">Today</span>
-                        </div>
-                    </div>
-                    
-                    <div class="wish-card rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-blue-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="text-lg font-bold text-gray-800">Emma</h4>
-                        </div>
-                        <p class="text-gray-600">Happy birthday, Maxy! Your kindness and warmth inspire everyone around you. Wishing you health, happiness, and all the success in the world this coming year!</p>
-                        <div class="mt-4 flex justify-end">
-                            <span class="text-xs text-gray-400">Today</span>
-                        </div>
-                    </div>
-                    
-                    <div class="wish-card rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-yellow-100 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="text-lg font-bold text-gray-800">David</h4>
-                        </div>
-                        <p class="text-gray-600">On your special day, I wish you endless joy and wonderful surprises! You deserve the very best, today and always. Happy birthday, Maxy!</p>
-                        <div class="mt-4 flex justify-end">
-                            <span class="text-xs text-gray-400">Today</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Memories Section -->
-    <section id="memories" class="py-20 bg-white relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-pink-600 mb-4">Beautiful Memories</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto"></div>
-                <p class="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">A journey through some of Maxy's most cherished moments</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="timeline relative pl-8">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item relative pb-12" data-aos="fade-right">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 mb-4 md:mb-0">
-                                <div class="photo-frame bg-pink-50 p-2">
-                                    <img src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Graduation day" class="w-full h-auto object-cover rounded-lg">
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 md:pl-8">
-                                <h3 class="text-2xl font-bold text-purple-600 mb-2">University Graduation</h3>
-                                <div class="text-sm text-pink-500 mb-3">May 2015</div>
-                                <p class="text-gray-600">Maxy graduated with honors in Business Administration, achieving her dream after years of hard work and dedication.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item relative pb-12" data-aos="fade-right" data-aos-delay="100">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 mb-4 md:mb-0">
-                                <div class="photo-frame bg-purple-50 p-2">
-                                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="First marathon" class="w-full h-auto object-cover rounded-lg">
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 md:pl-8">
-                                <h3 class="text-2xl font-bold text-purple-600 mb-2">First Marathon Completed</h3>
-                                <div class="text-sm text-pink-500 mb-3">October 2017</div>
-                                <p class="text-gray-600">After months of training, Maxy crossed the finish line of her first marathon, proving that with determination, anything is possible.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item relative pb-12" data-aos="fade-right" data-aos-delay="200">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 mb-4 md:mb-0">
-                                <div class="photo-frame bg-blue-50 p-2">
-                                    <img src="https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Italy trip" class="w-full h-auto object-cover rounded-lg">
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 md:pl-8">
-                                <h3 class="text-2xl font-bold text-purple-600 mb-2">Trip of a Lifetime - Italy</h3>
-                                <div class="text-sm text-pink-500 mb-3">June 2019</div>
-                                <p class="text-gray-600">Maxy fulfilled her dream of visiting Italy, exploring Rome, Florence, and Venice while indulging in delicious pasta and gelato.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Timeline Item 4 -->
-                    <div class="timeline-item relative pb-12" data-aos="fade-right" data-aos-delay="300">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 mb-4 md:mb-0">
-                                <div class="photo-frame bg-yellow-50 p-2">
-                                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="New job" class="w-full h-auto object-cover rounded-lg">
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 md:pl-8">
-                                <h3 class="text-2xl font-bold text-purple-600 mb-2">Dream Job Achievement</h3>
-                                <div class="text-sm text-pink-500 mb-3">January 2021</div>
-                                <p class="text-gray-600">Maxy landed her dream job as Marketing Director at InnovateCo, combining her creativity with her business acumen.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Timeline Item 5 -->
-                    <div class="timeline-item relative" data-aos="fade-right" data-aos-delay="400">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/3 mb-4 md:mb-0">
-                                <div class="photo-frame bg-green-50 p-2">
-                                    <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Birthday celebration" class="w-full h-auto object-cover rounded-lg">
-                                </div>
-                            </div>
-                            <div class="md:w-2/3 md:pl-8">
-                                <h3 class="text-2xl font-bold text-purple-600 mb-2">Today's Special Celebration</h3>
-                                <div class="text-sm text-pink-500 mb-3">Present Day</div>
-                                <p class="text-gray-600">Creating new beautiful memories on this special birthday, surrounded by love, joy, and happiness!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-pink-50 relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-pink-600 mb-4">Stay Connected</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto"></div>
-                <p class="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">Want to send Maxy a personal message or connect on social media?</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8" data-aos="fade-right">
-                        <h3 class="text-2xl font-bold text-purple-600 mb-6">Send a Message</h3>
-                        <form class="space-y-6">
-                            <div>
-                                <label for="contactName" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                                <input type="text" id="contactName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" placeholder="Enter your name">
-                            </div>
-                            <div>
-                                <label for="contactEmail" class="block text-gray-700 font-medium mb-2">Your Email</label>
-                                <input type="email" id="contactEmail" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" placeholder="Enter your email">
-                            </div>
-                            <div>
-                                <label for="contactMessage" class="block text-gray-700 font-medium mb-2">Your Message</label>
-                                <textarea id="contactMessage" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" placeholder="Write your message here..."></textarea>
-                            </div>
-                            <button type="button" id="sendMessage" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center justify-center transition duration-300 w-full">
-                                <span>Send Message</span>
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
-                        <h3 class="text-2xl font-bold text-purple-600 mb-6">Connect Socially</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="bg-pink-100 rounded-full p-4 mr-4">
-                                    <svg class="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800">Instagram</h4>
-                                    <p class="text-gray-600">@maxysworld</p>
-                                    <a href="#" class="text-pink-600 hover:text-purple-600 text-sm">Follow Maxy</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <div class="bg-blue-100 rounded-full p-4 mr-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800">LinkedIn</h4>
-                                    <p class="text-gray-600">Maxy Professional</p>
-                                    <a href="#" class="text-pink-600 hover:text-purple-600 text-sm">Connect Professionally</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <div class="bg-red-100 rounded-full p-4 mr-4">
-                                    <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800">Pinterest</h4>
-                                    <p class="text-gray-600">Maxy's Inspirations</p>
-                                    <a href="#" class="text-pink-600 hover:text-purple-600 text-sm">Explore Boards</a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-purple-600 mb-6">My Wish For You</h3>
+                <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                    <p class="text-gray-600 text-lg">Maxy, my wish for you is simple yet profound: May this year bring you as much happiness as you've brought into my life. May your dreams take flight, may your heart stay light, and may you always remember how truly special you are to me and everyone who knows you.</p>
+                    <div class="mt-6">
+                        <svg class="w-12 h-12 mx-auto text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -781,32 +382,10 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col items-center">
                 <div class="mb-6">
-                    <span class="text-2xl font-bold text-pink-600 handwriting">For Maxy</span>
+                    <span class="text-2xl font-bold text-pink-600 handwriting">Happy Birthday Maxy!</span>
                 </div>
-                <div class="flex space-x-6 mb-6">
-                    <a href="#" class="text-gray-500 hover:text-pink-600">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-pink-600">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-pink-600">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-pink-600">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
-                        </svg>
-                    </a>
-                </div>
-                <p class="text-gray-500 text-sm text-center">© 2023 Birthday Celebration for Maxy. All rights reserved.</p>
-                <p class="text-gray-400 text-xs mt-2">Made with ❤️ for someone special</p>
+                <p class="text-gray-500 text-sm text-center">Made with love for someone very special</p>
+                <p class="text-gray-400 text-xs mt-2">© 2023 - A gift from the heart</p>
             </div>
         </div>
     </footer>
@@ -841,98 +420,20 @@
             });
         });
 
-        // Dark mode toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-        
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            document.body.classList.toggle('starry-bg');
-            sunIcon.classList.toggle('hidden');
-            moonIcon.classList.toggle('hidden');
+        // Confetti button
+        const confettiBtn = document.getElementById('confettiBtn');
+        confettiBtn.addEventListener('click', () => {
+            createConfetti();
+            const audio = document.getElementById('birthdayAudio');
+            audio.play();
         });
-
-        // Wish submission
-        const submitWish = document.getElementById('submitWish');
-        const nameInput = document.getElementById('name');
-        const wishInput = document.getElementById('wish');
-        const wishesContainer = document.getElementById('wishesContainer');
-        
-        submitWish.addEventListener('click', () => {
-            const name = nameInput.value.trim();
-            const wish = wishInput.value.trim();
-            
-            if (name && wish) {
-                // Create new wish element
-                const wishElement = document.createElement('div');
-                wishElement.className = 'wish-card rounded-xl p-6 shadow-md';
-                wishElement.innerHTML = `
-                    <div class="flex items-center mb-4">
-                        <div class="bg-${getRandomColor()}-100 rounded-full p-3 mr-4">
-                            <svg class="w-6 h-6 text-${getRandomColor()}-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-lg font-bold text-gray-800">${name}</h4>
-                    </div>
-                    <p class="text-gray-600">${wish}</p>
-                    <div class="mt-4 flex justify-end">
-                        <span class="text-xs text-gray-400">Just now</span>
-                    </div>
-                `;
-                
-                // Add to container
-                wishesContainer.prepend(wishElement);
-                
-                // Clear inputs
-                nameInput.value = '';
-                wishInput.value = '';
-                
-                // Show confetti
-                createConfetti();
-                
-                // Play sound
-                const audio = document.getElementById('birthdayAudio');
-                audio.play();
-                
-                // Show success message
-                alert('Your wish has been sent to Maxy! 🎉');
-            } else {
-                alert('Please enter both your name and a wish!');
-            }
-        });
-
-        // Contact form submission
-        const sendMessage = document.getElementById('sendMessage');
-        
-        sendMessage.addEventListener('click', () => {
-            const name = document.getElementById('contactName').value.trim();
-            const email = document.getElementById('contactEmail').value.trim();
-            const message = document.getElementById('contactMessage').value.trim();
-            
-            if (name && email && message) {
-                alert(`Thank you, ${name}! Your message has been sent to Maxy. She'll get back to you soon!`);
-                document.getElementById('contactName').value = '';
-                document.getElementById('contactEmail').value = '';
-                document.getElementById('contactMessage').value = '';
-            } else {
-                alert('Please fill in all fields!');
-            }
-        });
-
-        // Helper function to get random color
-        function getRandomColor() {
-            const colors = ['pink', 'purple', 'blue', 'yellow'];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
 
         // Confetti effect
         function createConfetti() {
             const container = document.getElementById('confetti-container');
             container.innerHTML = '';
             
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 150; i++) {
                 const confetti = document.createElement('div');
                 confetti.className = 'confetti';
                 confetti.style.left = Math.random() * 100 + 'vw';
@@ -981,30 +482,6 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-            });
-        });
-
-        // Active nav link highlighting
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= sectionTop - 300) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active-nav');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active-nav');
-                }
             });
         });
 
@@ -1116,112 +593,6 @@
                 "retina_detect": true
             });
         }
-
-//updated
-
-        document.querySelectorAll('.balloon').forEach(balloon => {
-    balloon.addEventListener('click', () => {
-        balloon.style.transition = 'transform 0.2s';
-        balloon.style.transform = 'scale(1.1)';
-        setTimeout(() => {
-            balloon.style.transform = 'scale(0)';
-            // Play pop sound (add audio element first)
-            new Audio('https://assets.mixkit.co/sfx/preview/mixkit-balloon-pop-with-delay-2354.mp3').play();
-            setTimeout(() => balloon.remove(), 200);
-        }, 200);
-    });
-});
-
-
-        // Enhanced Sparkles Creator
-function createSuperSparkles() {
-  const colors = [
-    'rgba(255, 255, 255, 0.9)', // Classic white
-    'rgba(255, 215, 218, 0.8)', // Blush pink
-    'rgba(226, 212, 240, 0.8)', // Lavender
-    'rgba(255, 255, 0, 0.7)'    // Gold
-  ];
-  
-  const sparkleTypes = [
-    'circle', 'star', 'heart', 'diamond'
-  ];
-
-  setInterval(() => {
-    // Create sparkle container
-    const sparkle = document.createElement('div');
-    sparkle.className = 'magic-sparkle';
-    
-    // Random position
-    sparkle.style.left = `${Math.random() * 100}vw`;
-    sparkle.style.top = `${Math.random() * 100}vh`;
-    
-    // Random appearance
-    const size = Math.random() * 10 + 5;
-    const type = sparkleTypes[Math.floor(Math.random() * sparkleTypes.length)];
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    
-    sparkle.style.width = `${size}px`;
-    sparkle.style.height = `${size}px`;
-    sparkle.style.background = color;
-    
-    // Shape-specific styling
-    switch(type) {
-      case 'star':
-        sparkle.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
-        break;
-      case 'heart':
-        sparkle.style.clipPath = 'path("M10 6 Q15 -5 20 6 Q25 15 10 25 Q-5 15 0 6 Q5 -5 10 6")';
-        sparkle.style.transform = `scale(${size/15})`;
-        break;
-      case 'diamond':
-        sparkle.style.clipPath = 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)';
-        break;
-      default: // circle
-        sparkle.style.borderRadius = '50%';
-    }
-    
-    // Animation
-    sparkle.style.animation = `sparkle-fall ${Math.random() * 3 + 2}s linear forwards`;
-    
-    document.body.appendChild(sparkle);
-    
-    // Cleanup
-    setTimeout(() => sparkle.remove(), 5000);
-  }, 100); // Creates a new sparkle every 100ms
-}
-
-// Enhanced Sparkle Animation
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes sparkle-fall {
-    0% {
-      transform: translateY(-20px) rotate(0deg) scale(0.5);
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-      transform: translateY(0) rotate(0deg) scale(1);
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100px) rotate(360deg) scale(0);
-      opacity: 0;
-    }
-  }
-  
-  .magic-sparkle {
-    position: fixed;
-    pointer-events: none;
-    filter: blur(0.5px);
-    will-change: transform, opacity;
-  }
-`;
-document.head.appendChild(style);
-
-
     </script>
 </body>
 </html>
-</xaiArtifact>
